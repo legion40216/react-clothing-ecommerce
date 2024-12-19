@@ -1,0 +1,114 @@
+.product{
+    display: grid;
+    grid-template-columns: 350px 50%;
+    padding: 2.5rem 0 4rem 0;
+    place-content: center;
+}
+
+.product .product__image{
+    object-fit: contain;
+    position: relative;
+}
+
+.product__details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px 0 70px;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.discount{
+background-color: var(--clr-primary-dim100);
+color: var(--clr-primary-100);
+padding: 0.2rem 0.5rem;
+border-radius: 0.3rem;
+}
+
+.price_line-through{
+color: var(--clr-dim-100);
+text-decoration: line-through;
+    }
+
+
+
+.product__details-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}    
+.product__details-btns
+{
+    background-color: hsl(240, 12%, 93%);
+}
+
+.product__details-buttons .btn {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-700);
+    padding: 0.5rem 1.5rem;
+
+}
+
+.product__details-buttons span {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-700);
+    padding: 0.55rem 1.5rem;
+    color: var(--clr-primary-100);
+}
+
+.product__details-buttons .add-cart_btn{
+    display: flex;
+    font-weight: var(--fw-500);
+    padding: 0.5rem 0;
+    width: 100%;
+    max-width: 13rem;
+    background-color: var(--clr-primary-100);
+    color: white ;
+    align-items: center;
+    gap: 0.5rem ;
+    justify-content: center;
+}
+
+
+.product__details-buttons .add-cart_btn[data-type="invalid"]{
+    color: hsl(0deg 0% 100% / 23%);
+    background-color: hsl(212deg 100% 18% / 66%);
+    cursor: default;
+    }
+
+
+.gallery__card-new
+{
+position: absolute;
+top: 10px;
+right: 0;
+left: 0;
+margin: 0.5rem;
+}
+.gallery__card-new span{
+    padding: 0.3rem 0.8rem;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-100);
+    border-radius: 100vw;
+}
+
+@media (max-width:45em){
+    .product{
+        grid-template-columns: 1fr;
+        padding: 1.5rem 0 2rem 0;
+        margin: 0 auto;
+        }
+        
+        .product__details{
+            padding: 0 20px;
+        }
+
+        .product__details-buttons
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+}

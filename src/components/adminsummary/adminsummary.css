@@ -1,0 +1,14 @@
+.admin__ordersummary
+{
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 3rem 0;
+}
+
+.admin_summary-detials button{
+  padding: 0.5rem 0.8rem;
+  background-color: red;
+  color: white;
+  display: block;
+  margin-left:  auto;
+}

@@ -1,0 +1,45 @@
+
+
+ .radiobtn  [type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 100%;
+    background-color: inherit;
+    background-size: contain;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    position: absolute;
+    top: auto;
+    left: 0;
+    z-index: 0;
+}
+
+.radiobtn label{
+    font-weight: var(--fw-300);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.radiobtn [type=radio]:checked + label{
+    border-bottom: 1px solid var(--clr-primary-100);
+}
+
+@media (max-width:30em){
+    .radiobtn label{
+   border: 1px solid var(--clr-primary-100);
+   color: var(--clr-primary-100);
+   padding: 0.5rem 0.8rem;
+   display: block;
+   text-align: center;
+    }
+   
+.radiobtn [type=radio]:checked + label{
+    background-color: var(--clr-primary-100);
+    color: var(--clr-neutral-100);
+    border: 1px solid transparent;
+}
+    
+}

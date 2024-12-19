@@ -1,0 +1,357 @@
+/* navbar */
+.navbar_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 0px 0.8rem 0px;
+    }
+    
+    .navbar__logo img{
+    width: 75px;
+    }
+    
+    .navbar-links{
+      display: flex;
+      justify-content: space-evenly;
+      }
+    
+      .navbar-links > li {
+        margin: 0;
+        border-bottom: 1px solid #ebebeb;
+        padding: 0.7rem;
+        text-transform: uppercase;
+      }
+    
+    .navbar-links > li > a{
+      text-decoration: none;
+      font-weight: var(--fw-700);
+      color: var(--clr-primary-100);
+      letter-spacing: .05em;
+    }
+    
+    .navbar_bottom{
+      display: block;
+      background-color: var(--clr-neutral-200);
+    }
+    
+    .mobile-nav-toggle{
+      display: none;
+      }
+    
+    /* Navigation Sidebar */
+    
+      .nav-sidebar{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+        /* additonalstyles no need to copy */
+        overflow-y: auto;
+        z-index: 999;
+        max-width: 700px;
+        width: 83vw;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        transform: translate3d(-100%,0,0);
+        visibility: hidden;
+        opacity: 0;
+        animation: slide-back .25s ease-in-out forwards
+      }
+      .nav-sidebar__brand{
+       display: flex;
+       justify-content: space-between;
+       padding: 1rem;
+      }
+      
+      .nav-sidebar__brand img{
+        width: 50px;
+      }
+      
+      .navbar-sidebar__backdrop{
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgba(0,0,0,.6);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        position: fixed;
+        animation: fade 2s forwards
+      }
+      
+      .nav-sidebar .navbar-links{
+      font-size: var(--fs-400);
+      display: flex;
+      flex-direction: column;
+      background-color: var(--clr-neutral-100);
+      }
+      
+      .nav-sidebar .navbar-links > li {
+        margin: 0;
+        border-bottom: 1px solid #ebebeb;
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+      }
+
+  
+      .nav-sidebar .navbar-links > li > a{
+        text-decoration: none;
+        font-weight: var(--fw-700);
+        letter-spacing: .05em;
+      }
+      
+      .disable-link{
+        pointer-events: none;
+      }
+ 
+      
+      @keyframes fade {
+        0%{ 
+            opacity: 0;
+            visibility: hidden;
+        }
+        100%{
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    
+      @keyframes slide-back {
+        0%{ transform: translate3d(-100%,0,0);
+            opacity: 0;
+            visibility: hidden;
+        }
+        100%{transform: translateZ(0);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    
+      /* Shopping cart Sidebar */
+      .right-groups__header{
+        width: 15rem;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .shopping_cart{
+        position: relative;
+        cursor: pointer;
+      }
+    
+      .cart_count{
+        position: absolute;
+        padding: 0.29rem 0.90rem;
+        border-radius: 100vw;
+        background-color: var(--clr-primary-1);
+        left: 18px;
+        bottom: 15px;
+        color: var(--clr-neutral-100);
+      }
+    
+      .shopping__cart-sidebar{
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 450px;
+        width: 90vw;
+        background-color: var(--clr-neutral-200);
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        animation: slide-right .35s ease-in-out forwards
+      }
+      
+      .shopping__cart-brand{
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.2rem;
+        justify-content: space-between;
+        background-color: var(--clr-neutral-100);
+      }
+      
+      .shoppping__cart-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        overflow-y: auto;
+      }
+    
+      .shoppping__cart-empty{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+      }
+    
+      .checkout_container{
+        padding: 0 1.2rem 1rem 1.2rem;
+        background-color: var(--clr-neutral-100);
+      }
+    
+     .shopping__cart-items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 8px;
+     }
+ 
+     .shopping__cart-items-img img{
+        object-fit: contain;
+        width: 5rem;
+    }
+
+    .shopping__cart-img-title-container{
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .shopping__cart-items-title span{
+        display: block;
+    }
+
+     .shoppping__cart-btn-container{
+      font-size: var(--fs-500);
+      display: flex;
+      gap:0.8rem;
+     }
+     .shoppping__cart-btn-container button{
+    font-size: inherit;
+       }
+
+       .discount{
+        background-color: var(--clr-primary-dim100);
+        color: var(--clr-primary-100);
+       padding: 0.2rem 0.5rem;
+        border-radius: 0.3rem;
+        font-size: var(--fs-300);
+       }
+   
+   .price_line-through{
+   color: var(--clr-dim-100);
+   text-decoration: line-through;
+       }
+
+       .checkout_container button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        background-color: var(--clr-primary-100);
+        color: var(--clr-neutral-100);
+        width: 100%;
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: var(--fw-700);
+        letter-spacing: .1rem;
+      }
+
+      .checkout_container button[data-type="valid"]:hover{
+        background-color: hsl(212deg 92% 33%);
+      }
+      
+      .checkout_container button[data-type="invalid"]{
+        color: hsl(0deg 0% 100% / 23%);
+        background-color: hsl(212deg 100% 18% / 66%);
+        cursor: default;
+        }
+        
+      .overflowy-hidden{
+        overflow-y: hidden;
+      }
+      .overflowy-auto{
+        overflow-y: auto;
+      }
+
+      @keyframes slide-right {
+        0%{ transform: translate3d(100%,0,0);
+            opacity: 0;
+            visibility: hidden;
+        }
+        100%{transform: translate3d(0%,0,0);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    
+      @media (max-width:50em){
+        .right-groups__header{
+         width: 65px;
+        }
+    
+        .navbar__logo img{
+          width: 50px;
+          }
+    
+        .mobile-nav-toggle{
+          display: block;
+          cursor: pointer;
+          background: transparent;
+          padding: 0.5em;
+          width: 1.8rem;
+          aspect-ratio: 1;
+          background-image: url("../../assets/icon-hamburger.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          }
+      
+          .navbar_bottom{
+            display: none;
+          }
+          .right-groups__header{
+            position: fixed;
+            right: 26px;
+            top: 16px;
+            z-index: 999;
+            padding: 2px;
+            border-radius: 5px;
+            width: max-content;
+          }
+          .left-groups__header button {
+            position: fixed;
+            left: 14px;
+            z-index: 999;
+            padding: 2px;
+            border-radius: 5px;
+            top: 19px;
+        }
+        
+       .primary-navigation{
+        margin: 0;
+        width: 100%;
+             }
+
+        .left-groups__header h1 {
+            display: none;
+          }
+
+      .navbar_top{
+        justify-content: center;
+      }
+
+          /* .navbar-sidebar__backdrop--open{
+            opacity: 1;
+            visibility: visible;
+            transition-timing-function: ease-in-out;
+          }
+      
+          .nav-sidebar--open {
+            opacity: 1;
+          visibility: visible;
+          transform: translateZ(0);
+          transition-property: opacity,visibility,transform;
+          transition-timing-function: ease-in-out;
+          transition-duration: .25s;
+          }   */
+        }
+      

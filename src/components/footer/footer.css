@@ -1,0 +1,147 @@
+
+  .primary-footer__wrapper{
+    background-color:var(--clr-neutral-300);
+    color: var(--clr-neutral-100);  
+    display: grid;
+    align-items: start;
+    gap: var(--size-700);
+    grid-template-areas: 
+    "form"
+    "nav"
+    "social"
+    "logo"
+    "copyright"
+    ;
+  }
+  .primary-footer__logo{
+    grid-area: logo ;
+  }
+  
+  .primary-footer__nav
+  {
+    grid-area: nav;
+ 
+  }
+  
+  .primary-footer__form
+  {
+    grid-area: form;
+    display: flex;
+    gap: var(--size-200);
+    justify-content: center;
+  }
+  
+  
+  .primary-footer__copyright{
+  grid-area: copyright;
+  opacity: 0.5;
+  }
+  
+  
+  
+  @media(min-width:50em)
+  {
+   .primary-footer__wrapper{
+    grid-template-areas:
+    "logo nav form"
+    "social nav copyright";
+    grid-template-columns: min-content 1fr auto;
+   }
+   .primary-footer__copyright{
+    text-align: right;
+   }
+  
+  }
+  
+  @media(max-width:50em)
+  {
+    .primary-footer__wrapper > *
+    {
+      margin: 0 auto
+    }
+  
+  }
+  
+  /* footer navigation */
+  .footer-nav{
+  columns: 2;
+  gap: max(5vw, 7rem);
+  text-transform: capitalize;
+  margin: 0 auto;
+  max-width: 450px;
+  }
+
+  .primary-footer__wrapper a{
+    text-decoration: none;
+  font-weight: var(--fw-700);
+  color: var(--clr-netural-100);
+  
+  }
+
+  .footer-nav a:is(:hover, :focus){
+    color: var(--clr-dim-100);  
+    }
+  
+  /* scoial list */
+  
+  .social-list{
+    display: flex;
+    gap: var(--size-600);
+  }
+
+
+
+  .social-icon{
+    width: var(--size-600);
+    fill: var(--clr-netural-100);
+    aspect-ratio: 1;
+   
+  }
+  
+  .social-list a:is(:hover, :focus) .social-icon{
+  
+    fill: var(--clr-primary-400)
+    }
+  
+  @media (min-width: 50em)
+  {
+    .social-list{
+      gap: var(--size-400);
+     
+    }
+    .social-list svg{
+      width: 25px;
+      aspect-ratio: 1;
+    }
+
+    .social-icon{
+      width: var(--size-400);
+    }
+  }
+  
+  /* input */
+  .primary-footer__form input{
+    border: 0;
+    padding: var(--size-200) var(--size-500);
+    width: min(100%, 14rem);
+    height: 100%;
+    font-family: inherit;
+    }
+  
+    .primary-footer__form button{
+     padding: 0.5rem 0.8rem;
+     font-weight: 700;
+      }
+
+      .scroll__up{
+        padding: 0.7rem;
+        border-radius: 100%;
+        background-color: var(--clr-dim-300);
+        position: fixed;
+        bottom: 80px;
+        right: 10px;
+      }
+
+      .scroll__up:hover svg{
+        color: var(--clr-primary-100) !important
+      }

@@ -1,0 +1,45 @@
+.breadcrums__navbar{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    margin-top: 1rem; 
+
+}
+
+.breadcrums__navbar ul{
+    display: flex;
+    align-items: center;
+}
+
+.breadcrums__navbar ul li button{
+  
+    padding: 0.4rem;
+    font-size: 0.85rem;
+    border-radius: 0.2rem;
+    text-transform: capitalize;
+}
+
+.breadcrums__navbar ul li{
+    background: var(--clr-dim-200);
+}
+
+.breadcrums__navbar ul li:nth-child(1) {
+    background: white !important
+  }
+  .breadcrums__navbar ul li:nth-child(1) :hover {
+    background: var(--clr-dim-200);
+  }
+
+.gallery .breadcrums__navbar
+{
+    display: block;
+}
+
+@media (min-width:45em){
+    .breadcrums__navbar{
+        margin-top: 2rem; 
+        display: grid;
+        grid-template-columns: 350px 50%;
+        place-content: center;
+        }
+}

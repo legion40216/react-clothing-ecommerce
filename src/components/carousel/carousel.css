@@ -1,0 +1,29 @@
+
+.silder .slick-prev{
+    display: none !important
+}
+
+.silder  .slick-next{
+    display: none  !important
+}
+
+
+.silder .slick-dots{
+    bottom: 20px;
+    }
+
+    .silder   .slick-dots li{
+     margin: 0 10px;
+    }
+
+    .silder  .slick-dots li button:before
+    {
+     font-size: 20px;
+    }
+ 
+@media (max-width:50em){
+    .silder  .slick-dots li button:before
+    {
+     font-size: 10px;
+    }
+}   

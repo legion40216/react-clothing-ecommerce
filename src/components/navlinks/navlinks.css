@@ -1,0 +1,13 @@
+.nav-sidebar__container .navbar-links a{
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+}
+
+
+.nav-sidebar__container .navbar-links li:hover{
+    background-color: var(--clr-primary-100);
+    color: var(--clr-neutral-100);
+}
