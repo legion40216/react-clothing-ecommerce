@@ -89,9 +89,7 @@ return (
 <h1 className='[ fs-primary-highlight ]'>{productid.name}</h1></div>
 
 <div>
-    <p>hese low-profile sneakers are your perfect casual wear companion. 
-    Featuring a durable rubber outer sole, they’ll 
-    withstand everything the weather can offer</p>
+    <p className="text-capitalize">Season: {productid.season}</p>
 </div>
 
 <div className='product__details-price'>
