@@ -321,9 +321,9 @@ const Checkout = ({userData,handleCheckout}) => {
       {orderCollected && (
         <div className='checkout__backdrop'>
           <div className='model flow '>
-            <h1 className='font-size-600 margin-b-4'>Thank you, for shopping with us 🎉</h1>
-            <p>You will reciveve a confimation message shortly</p>
-      <button className='button' onClick={()=>{setorderSend(true)}}>Continue Shopping</button>
+            <h1 className='font-size-600 margin-b-4'>Demo checkout complete 🎉</h1>
+            <p>This is a frontend demo. No order was submitted or saved.</p>
+      <button className='button' onClick={()=>{setorderSend(true)}}>Return to store</button>
           </div>
         </div>
         )}
