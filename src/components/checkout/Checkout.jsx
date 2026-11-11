@@ -105,8 +105,9 @@ const Checkout = ({userData,handleCheckout}) => {
       setAddress('')
       setCountry('')
       setCity('')
+      navigate('/')
     }
-   },[orderSend])
+   },[orderSend, handleCheckout, navigate])
 
 
     useEffect(()=>{
