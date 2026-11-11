@@ -253,7 +253,7 @@ const Checkout = ({userData,handleCheckout}) => {
      
      </form>
      <div className='dflex justify-content-center'>
-      <a href={sectionRedirect}><button onClick={handlesubmit} className='checkout_btn'>Continue and Pay</button></a>
+      <a href={sectionRedirect}><button onClick={handlesubmit} className='checkout_btn'>Continue with cash on delivery</button></a>
      </div>
     </div>
 
